@@ -1,0 +1,11 @@
+# Mac shit 
+.DS_Store
+.vscode/
+
+# Vim swap files
+*.swp
+
+# Binaries
+*.o
+binarysearchtree
+binarysearchtree_debug
