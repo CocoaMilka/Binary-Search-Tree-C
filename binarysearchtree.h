@@ -19,15 +19,17 @@ typedef struct TREE
 
 Tree* tree_create();
 
-void tree_insert_key(int key);
+void tree_insert_key(Tree* tree, int key);
 
-bool tree_find_key_recursive(int key);
-bool tree_find_key_iterative(int key);
+bool tree_find_key_recursive(Tree* tree, int key);
+bool tree_find_key_iterative(Tree* tree, int key);
 
 bool tree_is_valid(Tree* tree);
 
 Tree* tree_deep_copy(Tree* tree);
 
 void tree_delete(Tree* tree);
+
+void print_tree(Node* node);
 
 #endif
