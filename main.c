@@ -16,8 +16,10 @@ int main()
 	tree_insert_key(tree, 9);
 	tree_insert_key(tree, 7);
 
-	print_tree(tree->root);
+	//print_tree(tree->root);
 	
+	tree_delete(tree);	
+
 	return 0;
 }
 

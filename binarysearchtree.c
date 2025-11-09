@@ -53,12 +53,29 @@ bool tree_is_valid(Tree* tree)
 
 Tree* tree_deep_copy(Tree* tree)
 {
-	return tree;
+	Tree* copy = tree_create();
+	
+	Node* tmp = tree->root;
+	Node* node = malloc(sizeof(Node));
+	node->key = tmp->key;
+	
+	copy->root = node;
+
+	return copy;
 }
 
 void tree_delete(Tree* tree)
 {
+	node_delete(tree->root);
+}
 
+void node_delete(Node* node)
+{
+	if (node == NULL)
+		return;
+	node_delete(node->smaller_keys);
+	node_delete(node->larger_keys);
+	free(node);
 }
 
 void print_tree(Node* node)

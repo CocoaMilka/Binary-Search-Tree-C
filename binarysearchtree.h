@@ -30,6 +30,8 @@ Tree* tree_deep_copy(Tree* tree);
 
 void tree_delete(Tree* tree);
 
+void node_delete(Node* node);
+
 void print_tree(Node* node);
 
 #endif
